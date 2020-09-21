@@ -1,19 +1,20 @@
 ---
 template: ContactPage
 slug: contact
-title: Contact Page
-featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
-subtitle: This is the contact page subtitle.
-address: '404 James St, Burleigh Heads QLD 4220'
-phone: 0987 123 456
-email: example@example.com
+title: Contact
+featuredImage: 'https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/'
+subtitle: Comment me joindre?
+address: El campo de la Simo...
+phone: 684 01 64 52
+email: dansylvain84@gmail.com
 locations:
-  - lat: '-27.9654732'
-    lng: '153.2432449'
-    mapLink: ''
+  - lat: ''
+    lng: ''
+    mapLink: >-
+      https://www.google.com/maps/place/Cadix/@36.5163813,-6.317487,13z/data=!3m1!4b1!4m5!3m4!1s0xd0dd25724ec240f:0x40463fd8ca03b00!8m2!3d36.5270612!4d-6.2885962
 meta:
-  description: This is a meta description.
-  title: Contact Page
+  description: ''
+  title: Contact
 ---
 
 # Example contact form
