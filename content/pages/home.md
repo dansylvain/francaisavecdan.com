@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: Apprendre le Français
-featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
+featuredImage: 'https://ucarecdn.com/0404c21d-2b54-4e54-82b0-12d75d5b9197/'
 subtitle: Le site conseil de Dan
 meta:
   description: ''
