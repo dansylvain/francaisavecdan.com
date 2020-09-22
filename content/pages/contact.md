@@ -2,7 +2,7 @@
 template: ContactPage
 slug: contact
 title: Contact
-featuredImage: 'https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/'
+featuredImage: 'https://ucarecdn.com/0a127b33-f296-4222-9267-7667779dd3e7/'
 subtitle: Comment me joindre?
 address: El campo de la Simo...
 phone: 684 01 64 52
