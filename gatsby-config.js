@@ -2,7 +2,7 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: 'Francais avec Dan',
+    title: 'Français avec Dan',
     siteUrl: 'https://yellowcake.netlify.com'
   },
   plugins: [
