@@ -11,7 +11,7 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          © Copyright {new Date().getFullYear()} Tous droits réservés. Site fait par{' '}
+          © Copyright {new Date().getFullYear()} Tous droits réservés. Site réalisé par{' '}
           <a href="https://francaisavecdan.netlify.app/contact/">Dan</a>.
         </span>
       </div>
