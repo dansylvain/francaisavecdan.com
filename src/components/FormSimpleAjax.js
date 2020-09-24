@@ -63,10 +63,10 @@ class Form extends React.Component {
         </Helmet>
         <form
           className="Form"
-          name={name}
+          name="contact"
           action={action}
           onSubmit={this.handleSubmit}
-          data-netlify=""
+          data-netlify="true"
         >
         <div><h2>Me contacter</h2></div>
           {this.state.alert && (
