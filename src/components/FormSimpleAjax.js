@@ -66,7 +66,7 @@ class Form extends React.Component {
           name={name}
           action={action}
           onSubmit={this.handleSubmit}
-          data-netlify=""
+          data-netlify="true"
         >
         <div><h2>Me contacter</h2></div>
           {this.state.alert && (
