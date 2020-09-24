@@ -61,7 +61,69 @@ class Form extends React.Component {
         <Helmet>
           <script src="https://www.google.com/recaptcha/api.js" />
         </Helmet>
-        <form className="contact-form" action="/thanks" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+
+        <form
+          className="Form"
+          action="/thanks"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          
+          <div className="Form--Group">
+            <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="text"
+                placeholder="Firstname"
+                name="firstname"
+                required
+              />
+              <span>Prénom</span>
+            </label>
+            <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="text"
+                placeholder="Lastname"
+                name="lastname"
+                required
+              />
+              <span>Nom</span>
+            </label>
+          </div>
+          <label className="Form--Label">
+            <input
+              className="Form--Input Form--InputText"
+              type="email"
+              placeholder="Email"
+              name="emailAddress"
+              required
+            />
+            <span>Adresse email</span>
+          </label>
+          <label className="Form--Label has-arrow">
+          </label>
+          <label className="Form--Label">
+            <textarea
+              className="Form--Input Form--Textarea Form--InputText"
+              placeholder="Message"
+              name="message"
+              rows="10"
+              required
+            />
+            <span>Message</span>
+          </label>
+          <input
+            className="Button Form--SubmitButton"
+            type="submit"
+            value="Envoyer message"
+          />
+        </form>
+
+
+{/*         <form className="contact-form" action="/thanks" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Nom<input type="text" name="name" /></label>   
@@ -79,7 +141,7 @@ class Form extends React.Component {
             <button className="button" type="submit">Envoyer 
             Message <span className="icon -right"></span></button>
           </p>
-        </form>
+        </form> */}
       </Fragment>
     )
   }
