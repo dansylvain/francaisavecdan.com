@@ -18,18 +18,18 @@ export default ({ children }) => (
     render={data => (
       <Layout>
         <Helmet>
-          <title>404 – Page Not Found</title>
+          <title>404 – Page non trouvée</title>
         </Helmet>
         <section className="section thick">
           <div className="container skinny taCenter">
             <p>
               <AlertTriangle size="5rem" />
             </p>
-            <h1>404 - Page Not Found</h1>
+            <h1>404 - Page non trouvée</h1>
             <p>
-              We can't find the page you are looking for!
+              On ne trouve pas la page que vous recherchez!
               <br />
-              Head back to{' '}
+              Revenir à{' '}
               <Link to="/">{_get(data, 'globalSettings.siteTitle')}</Link>
             </p>
           </div>
