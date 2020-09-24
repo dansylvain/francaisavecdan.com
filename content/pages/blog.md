@@ -1,11 +1,11 @@
 ---
 template: BlogIndex
 slug: blog
-title: Blog
+title: Ressources
 featuredImage: 'https://ucarecdn.com/f2dba9f1-1483-4ced-8c6e-1db6997953c6/'
-subtitle: Tous les articles publiés.
+subtitle: Toutes les ressources disponibles.
 meta:
   description: ''
-  title: Blog
+  title: Ressources
 ---
 
