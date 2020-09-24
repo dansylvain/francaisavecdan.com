@@ -61,16 +61,17 @@ class Form extends React.Component {
         <Helmet>
           <script src="https://www.google.com/recaptcha/api.js" />
         </Helmet>
-
         <form
           className="Form"
-          action="/thanks"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          name={name}
+          action={action}
+          onSubmit={this.handleSubmit}
+          data-netlify=""
+          netlify-recaptcha=""
         >
-          
+          {this.state.alert && (
+            <div className="Form--Alert">{this.state.alert}</div>
+          )}
           <div className="Form--Group">
             <label className="Form--Label">
               <input
@@ -80,7 +81,7 @@ class Form extends React.Component {
                 name="firstname"
                 required
               />
-              <span>Prénom</span>
+              <span>Firstname</span>
             </label>
             <label className="Form--Label">
               <input
@@ -90,9 +91,30 @@ class Form extends React.Component {
                 name="lastname"
                 required
               />
-              <span>Nom</span>
+              <span>Lastname</span>
             </label>
           </div>
+          <fieldset>
+            <label className="Form--Label Form--Radio">
+              <input
+                className="Form--RadioInput"
+                type="radio"
+                name="gender"
+                value="male"
+                defaultChecked
+              />
+              <span>Male</span>
+            </label>
+            <label className="Form--Label Form--Radio">
+              <input
+                className="Form--RadioInput"
+                type="radio"
+                name="gender"
+                value="female"
+              />
+              <span>Female</span>
+            </label>
+          </fieldset>
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
@@ -101,9 +123,22 @@ class Form extends React.Component {
               name="emailAddress"
               required
             />
-            <span>Adresse email</span>
+            <span>Email address</span>
           </label>
           <label className="Form--Label has-arrow">
+            <select
+              className="Form--Input Form--Select"
+              name="type"
+              defaultValue="Type of Enquiry"
+              required
+            >
+              <option disabled hidden>
+                Type of Enquiry
+              </option>
+              <option>Need to know more</option>
+              <option>Found a bug</option>
+              <option>Want to say hello</option>
+            </select>
           </label>
           <label className="Form--Label">
             <textarea
@@ -115,33 +150,27 @@ class Form extends React.Component {
             />
             <span>Message</span>
           </label>
+          <label className="Form--Label Form-Checkbox">
+            <input
+              className="Form--Input Form--Textarea Form--CheckboxInput"
+              name="newsletter"
+              type="checkbox"
+            />
+            <span>Get news updates</span>
+          </label>
+          <div
+            className="g-recaptcha"
+            data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
+          />
+          {!!subject && <input type="hidden" name="subject" value={subject} />}
+          <input type="hidden" name="form-name" value={name} />
           <input
             className="Button Form--SubmitButton"
             type="submit"
-            value="Envoyer message"
+            value="Enquire"
+            disabled={this.state.disabled}
           />
         </form>
-
-
-{/*         <form className="contact-form" action="/thanks" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Nom<input type="text" name="name" /></label>   
-          </p>
-          <p>
-            <label>Email<input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Sujet<input type="text" name="subject" /></label>   
-          </p>
-          <p>
-            <label>Message<textarea name="message"></textarea></label>
-          </p>
-          <p className="text-align-right">
-            <button className="button" type="submit">Envoyer 
-            Message <span className="icon -right"></span></button>
-          </p>
-        </form> */}
       </Fragment>
     )
   }
